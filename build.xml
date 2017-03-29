@@ -11,7 +11,7 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
+        <jar destfile="build/jar/HelloWorld.war" basedir="build/classes">
             <manifest>
                 <attribute name="Main-Class" value="com.Intel.HelloWorld"/>
             </manifest>
@@ -19,7 +19,7 @@
     </target>
 
     <target name="run" depends="jar">
-        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+        <java jar="build/jar/HelloWorld.war" fork="true"/>
     </target>
 
 </project>
